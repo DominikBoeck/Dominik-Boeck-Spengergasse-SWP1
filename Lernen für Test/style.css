@@ -1,6 +1,7 @@
 .test1 {
-    background-color: aqua;
+    background-color: red;
     padding: 10px 24px;
     border-radius: 12px;
     text-decoration: none;
+    font-size: large;
 }
