@@ -14,3 +14,31 @@ color: white;
 text-decoration: none;
 padding: 0px 10px ;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "israel flieger fieger man scheich"
+    "israel f1 tisch tisch seich" ;
+}
+
+.israel {
+    grid-area: israel;
+}
+.flieger {
+    grid-area: flieger;
+}
+.man {
+    grid-area: man;
+}
+.scheich {
+    grid-area: scheich;
+}
+.f1 {
+    grid-area: f1;
+}
+.tisch {
+    grid-area: tisch;
+}
