@@ -24,10 +24,18 @@ padding: 0px 10px ;
     "israel f1 tisch tisch seich" ;
 }
 
+.text a {
+text-decoration-line: none;
+text-decoration-style: none;
+color:white;
+font-size: 20px;
+
+}
+
 .text {
-text-indent: 2cm;
-text-decoration: none;
-color: black;
+text-indent: 3cm;
+
+
 }
 
 .israel {
