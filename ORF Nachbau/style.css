@@ -15,15 +15,6 @@ text-decoration: none;
 padding: 0px 10px ;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas:
-    "israel flieger fieger man scheich"
-    "israel f1 tisch tisch seich" ;
-}
-
 .text a {
 text-decoration-line: none;
 text-decoration-style: none;
@@ -35,7 +26,39 @@ font-size: 20px;
 .text {
 text-indent: 3cm;
 
+}
+.buttonback {
+    background-color: #5268C1;
+    padding: 0px 0px;
+    border-color: #5268C1;
+    text-decoration: none;
+    font-size: 50px;
+        
+}
 
+.kasten {
+background-color: white;
+padding: 5px 10px;
+border-radius: 12px;
+font-size: 20px;
+
+
+}
+
+
+
+
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "israel flieger fieger man scheich"
+        "israel f1 tisch tisch seich";
 }
 
 .israel {
