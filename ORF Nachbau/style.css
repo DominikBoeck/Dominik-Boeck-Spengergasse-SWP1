@@ -36,12 +36,15 @@ text-indent: 3cm;
         
 }
 
-.kasten {
+.kastenbody {
 background-color: white;
-padding: 5px 10px;
-border-radius: 12px;
-font-size: 20px;
+}
 
+.kasten {
+padding: 5px 10px;
+font-size: 20px;
+position: relative;
+left: 5cm;
 
 }
 
