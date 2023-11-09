@@ -48,35 +48,48 @@ left: 5cm;
 
 }
 
-.grid-container {
+.bildergrid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    margin-left:100px;
+    margin-right:95%;
+    grid-template-columns: 1fr auto auto auto 1fr;
     grid-template-areas:
         "israel flieger fieger man scheich"
-        "israel f1 tisch tisch seich";
+        "israel kfz tisch tisch seich";
 }
 
 .israel {
     grid-area: israel;
+    width: 100%;
+    height: auto;
 }
 
 .flieger {
     grid-area: flieger;
+    width: 100%;
+    height: auto;
 }
 
 .man {
     grid-area: man;
+    width: 100%;
+    height: auto;
 }
 
 .scheich {
     grid-area: scheich;
+    width: 100%;
+    height: auto;
 }
 
-.f1 {
-    grid-area: f1;
+.kfz {
+    grid-area: kfz;
+    width: 100%;
+    height: auto;
 }
 
 .tisch {
     grid-area: tisch;
+    width: 100%;
+    height: auto;
 }
