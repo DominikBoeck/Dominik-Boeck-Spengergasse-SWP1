@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80vh;
+}
+
+body > p {
+    width: 50vh;
+}
