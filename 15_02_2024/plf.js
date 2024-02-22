@@ -1,35 +1,134 @@
+//class Person {
+//  constructor(name, gender, groesseM, gewichtKG) {
+//    if (gender !== "m" && gender !== "f") {
+//      throw new Error("Wrong gender");
+//    }
+//    this.name = name;
+//    this.gender = gender;
+//    this.groesseM = groesseM;
+//    this.gewichtKG = gewichtKG;
+//  }
+//
+//
+//  groesseCM() {
+//    return this.groesseM * 100;
+//  }
+//
+//  vorName() {
+//    const names = this.name.split(" ");
+//    return names[0];
+//  }
+//
+//  nachName() {
+//    const names = this.name.split(" ");
+//    return names.slice(1).join(" ");
+//  }
+//
+//  toString() {
+//    return `${this.name} (${this.groesseCM()}cm, ${this.gewichtKG}kg)`;
+//  }
+//
+//  getBmi() {
+//    const bmi = this.gewichtKG / this.groesseM ** 2;
+//    return bmi;
+//  }
+//
+//  getGewichtType() {
+//    const bmi2 = this.getBmi();
+//    if (this.gender === "f" && bmi2 >= 19 && bmi2 <= 24) {
+//      return "Normalgewicht";
+//    } else if (this.gender === "m" && bmi2 >= 20 && bmi2 <= 25) {
+//      return "Normalgewicht";
+//    } else if (bmi2 < 19) {
+//      return "Untergewicht";
+//    } else {
+//      return "Übergewicht";
+//    }
+//  }
+//}
+//
+//
+//
+
+
 class Person {
-  constructor(name, geschlecht, groesseM, gewichtKG) {
-    this.name = name;
-    this.geschlecht = geschlecht;
-    this.groesseM = groesseM;
-    this.gewichtKG = gewichtKG;
-    if (geschlecht !== "m" && geschlecht !== "f") {
+  constructor(name, gender, groesseM, gewichtKG) {
+    if (gender !== "male" && gender !== "female") {
       throw new Error("Wrong gender");
     }
+    this.name = name;
+    this.gender = gender;
+    this.groesseM = groesseM;
+    this.gewichtKG = gewichtKG;
   }
-  toString() {
-    return "John Doe (180cm, 80kg)";
-  }
-  getBmi() {
-    return this.gewichtKG / Math.pow(this.groesseM, 2);
-  }
-  vorName() {
-    return "John";
-  }
-  nachName() {
-    return "Doe";
-  }
+
+  
   groesseCM() {
     return this.groesseM * 100;
   }
+
+  vorName() {
+    const names = this.name.split(" ");
+    return names[0];
+  }
+
+  nachName() {
+    const names = this.name.split(" ");
+    return names.slice(1).join(" ");
+  }
+
+  toString() {
+    return `${this.name} (${this.groesseCM()}cm, ${this.gewichtKG}kg)`;
+  }
+
+  getBmi() {
+    const bmi = this.gewichtKG / this.groesseM ** 2;
+    return bmi;
+  }
+
   getGewichtType() {
-    if (this.gewichtKG === 80) return "Normalgewicht";
-    if (this.gewichtKG === 120) return "Übergewicht";
-    if (this.gewichtKG === 50) return "Untergewicht";
+    const bmi2 = this.getBmi();
+    if (this.gender === "female" && bmi2 >= 19 && bmi2 <= 24) {
+      return "Normalgewicht";
+    } else if (this.gender === "male" && bmi2 >= 20 && bmi2 <= 25) {
+      return "Normalgewicht";
+    } else if (bmi2 < 19) {
+      return "Untergewicht";
+    } else {
+      return "Übergewicht";
+    }
   }
 }
-new Person("John Doe", "m", 1.8, 80);
-new Person("Eva Schwerlich", "f", 1.6, 120);
-new Person("Peter Leicht", "m", 1.9, 50);
-export { Person };
+
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector(".generator");
+    const output = document.getElementById("output");
+
+    button.addEventListener("click", function () {
+        const name = document.getElementById("name").value;
+        const gender = document.getElementById("gender").value;
+        const height = parseFloat(document.getElementById("height").value);
+        const weight = parseFloat(document.getElementById("weight").value);
+
+        try {
+            const person = new Person(name, gender, height, weight);
+            const bmi = person.getBmi();
+            const weightType = person.getGewichtType();
+
+            let outputText = `${person.toString()} hat einen BMI von ${bmi.toFixed(2)}, und ist ${weightType}`;
+            output.textContent = outputText;
+
+            
+            if (weightType === "Normalgewicht") {
+                output.style.color = "darkgreen";
+            } else if (weightType === "Übergewicht") {
+                output.style.color = "red";
+            } else if (weightType === "Untergewicht") {
+                output.style.color = "orange";
+            }
+        } catch (error) {
+            output.textContent = "Error: " + error.message;
+            output.style.color = "black"; 
+        }
+    });
+});
