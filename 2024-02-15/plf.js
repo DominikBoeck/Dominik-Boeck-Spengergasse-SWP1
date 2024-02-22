@@ -53,8 +53,8 @@
 
 class Person {
   constructor(name, gender, groesseM, gewichtKG) {
-    if (gender !== "male" && gender !== "female") {
-      throw new Error("Wrong gender");
+    if (gender !== "Mann" && gender !== "Frau") {
+      throw new Error("Falsches Geschlecht");
     }
     this.name = name;
     this.gender = gender;
@@ -78,7 +78,7 @@ class Person {
   }
 
   toString() {
-    return `${this.name} (${this.groesseCM()}cm, ${this.gewichtKG}kg)`;
+    return `${this.name} (${this.groesseCM()}cm, ${this.gewichtKG}kg, ${this.gender})`;
   }
 
   getBmi() {
