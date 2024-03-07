@@ -1,5 +1,15 @@
 {
-  "devDependencies": {
-    "@faker-js/faker": "^8.4.1"
-  }
+    "name": "2024-02-29",
+    "version": "1.0.0",
+    "description": "beispiel",
+    "main": "script.js",
+    "scripts": {
+        "test": "node script.js",
+        "debug": "node --inspect script.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@faker-js/faker": "^8.4.1"
+    }
 }
