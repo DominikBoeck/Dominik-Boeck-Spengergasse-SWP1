@@ -1,4 +1,3 @@
-
 class Person {
   constructor(name, gender, groesseM, gewichtKG) {
     if (gender !== "Mann" && gender !== "Frau") {
@@ -10,7 +9,6 @@ class Person {
     this.gewichtKG = gewichtKG;
   }
 
-  
   groesseCM() {
     return this.groesseM * 100;
   }
@@ -49,34 +47,33 @@ class Person {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const button = document.querySelector(".generator");
-    const output = document.getElementById("output");
+  const button = document.querySelector(".generator");
+  const output = document.getElementById("output");
 
-    button.addEventListener("click", function () {
-        const name = document.getElementById("name").value;
-        const gender = document.getElementById("gender").value;
-        const height = parseFloat(document.getElementById("height").value);
-        const weight = parseFloat(document.getElementById("weight").value);
+  button.addEventListener("click", function () {
+    const name = document.getElementById("name").value;
+    const gender = document.getElementById("gender").value;
+    const height = parseFloat(document.getElementById("height").value);
+    const weight = parseFloat(document.getElementById("weight").value);
 
-        try {
-            const person = new Person(name, gender, height, weight);
-            const bmi = person.getBmi();
-            const weightType = person.getGewichtType();
+    try {
+      const person = new Person(name, gender, height, weight);
+      const bmi = person.getBmi();
+      const weightType = person.getGewichtType();
 
-            let outputText = `${person.toString()} hat einen BMI von ${bmi.toFixed(2)}, und ist ${weightType}`;
-            output.textContent = outputText;
+      let outputText = `${person.toString()} hat einen BMI von ${bmi.toFixed(2)}, und ist ${weightType}`;
+      output.textContent = outputText;
 
-            
-            if (weightType === "Normalgewicht") {
-                output.style.color = "darkgreen";
-            } else if (weightType === "Übergewicht") {
-                output.style.color = "red";
-            } else if (weightType === "Untergewicht") {
-                output.style.color = "orange";
-            }
-        } catch (error) {
-            output.textContent = "Error: " + error.message;
-            output.style.color = "black"; 
-        }
-    });
+      if (weightType === "Normalgewicht") {
+        output.style.color = "darkgreen";
+      } else if (weightType === "Übergewicht") {
+        output.style.color = "red";
+      } else if (weightType === "Untergewicht") {
+        output.style.color = "orange";
+      }
+    } catch (error) {
+      output.textContent = "Error: " + error.message;
+      output.style.color = "black";
+    }
+  });
 });

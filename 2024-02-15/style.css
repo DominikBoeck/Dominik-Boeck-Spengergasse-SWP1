@@ -1,18 +1,16 @@
 body {
-    background:linear-gradient(to right, red, orange, green)
+  background: linear-gradient(to right, red, orange, green);
 }
 
 h1 {
-    font-family: fantasy;
+  font-family: fantasy;
 }
 
 .generator {
-    border-style: solid;
-    background-color: rgb(206, 165, 165);
-
+  border-style: solid;
+  background-color: rgb(206, 165, 165);
 }
 
 button:hover {
-    border-color: whitesmoke;
-
+  border-color: whitesmoke;
 }
