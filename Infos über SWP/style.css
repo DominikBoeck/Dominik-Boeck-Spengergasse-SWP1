@@ -1,0 +1,51 @@
+.buttonback {
+    background-color: red;
+    padding: 5px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    
+}
+
+.button1 {
+    background-color: aqua;
+    padding: 10px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    
+}
+
+.button2 {
+    background-color: rgb(0, 128, 62);
+    padding: 10px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+
+}
+
+.button3 {
+    background-color: yellowgreen;
+    padding: 10px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+
+}
+
+.button4 {
+    background-color: blue;
+    padding: 10px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+
+}
+
+.button5 {
+    background-color: darkmagenta;
+    padding: 10px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+
+}
+
+body {
+background-color: rgba(255, 230, 118, 0.408);
+}

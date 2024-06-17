@@ -1,0 +1,84 @@
+body {
+background-color: #5268C1;
+
+}
+
+
+.navbar {
+background-color: cornflowerblue;
+padding: 5px 15px;
+}
+
+.navbar a {
+color: white;
+text-decoration: none;
+padding: 0px 10px ;
+}
+
+.text a {
+text-decoration-line: none;
+text-decoration-style: none;
+color:white;
+font-size: 20px;
+
+}
+
+.text {
+text-indent: 3cm;
+
+}
+.buttonback {
+    background-color: #5268C1;
+    padding: 0px 0px;
+    border-color: #5268C1;
+    text-decoration: none;
+    font-size: 50px;
+        
+}
+
+.kastenbody {
+background-color: white;
+}
+
+.kasten {
+padding: 5px 10px;
+font-size: 20px;
+position: relative;
+left: 5cm;
+
+}
+
+.grid-container {
+    display: grid;
+    margin-left: 100px;
+    margin-right: 95%;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 150px 150px;
+    grid-template-areas:
+        "israel flieger flieger man scheich"
+        "israel kfz tisch tisch scheich ";
+}
+
+.israel {
+    grid-area: israel;
+}
+
+.flieger {
+    grid-area: flieger;
+}
+
+.man {
+    grid-area: man;
+}
+
+.scheich {
+    grid-area: scheich;
+}
+
+.auto {
+    grid-area: kfz;
+}
+
+.tisch {
+    grid-area: tisch;
+}
